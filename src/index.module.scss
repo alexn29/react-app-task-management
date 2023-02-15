@@ -1,0 +1,8 @@
+@import 'assets/scss/variables.module.scss';
+
+body {
+  font-family: var(--font);
+  background-color: var(--main_background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
