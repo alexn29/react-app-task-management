@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import 'normalize.css'
-import './index.module.scss'
 import { App } from '@modules/app'
+
+import 'remixicon/fonts/remixicon.css'
+import './index.module.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(

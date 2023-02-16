@@ -1,10 +1,16 @@
 $main_bg: #111111;
 $linear_gradient: linear-gradient(90deg, rgba(186, 37, 37, 0) 0%, rgba(210, 77, 77, 0.1) 100%);
+$neutral_1: #ffffff;
 $neutral_2: #94979a;
 $neutral_4: #2c2f33;
 $primary_4: #da584b;
 $secondary_4: #70b252;
 $tertiary_4: #e5b454;
+
+$neutral_2_with_opacity: #94979a1a;
+$primary_4_with_opacity: #da584b1a;
+$secondary_4_with_opacity: #70b2521a;
+$tertiary_4_with_opacity: #e5b4541a;
 
 $font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
   'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -12,10 +18,15 @@ $font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubunt
 :root {
   --main_background: #{$main_bg};
   --linear_gradient: #{$linear_gradient};
+  --neutral_1: #{$neutral_1};
   --neutral_2: #{$neutral_2};
   --neutral_4: #{$neutral_4};
   --primary_4: #{$primary_4};
   --secondary_4: #{$secondary_4};
   --tertiary_4: #{$tertiary_4};
+  --neutral_2_with_opacity: #{$neutral_2_with_opacity};
+  --primary_4_with_opacity: #{$primary_4_with_opacity};
+  --secondary_4_with_opacity: #{$secondary_4_with_opacity};
+  --tertiary_4_with_opacity: #{$tertiary_4_with_opacity};
   --font: #{$font};
 }

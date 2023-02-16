@@ -1,0 +1,16 @@
+.tasksGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+
+  .taskColumn {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-weight: 600;
+      color: var(--neutral_1);
+    }
+  }
+}

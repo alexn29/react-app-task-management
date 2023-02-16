@@ -1,10 +1,14 @@
 import { Routes, Route } from 'react-router-dom'
+import { Layout } from '@modules/app/components/Layout'
+import { Dashboard } from '@modules/management/Dashboard'
 import { NotFound } from '@modules/common/components/NotFound'
 
 const Router = () => (
   <Routes>
-    <Route path="/" element={<h1>Hello world</h1>} />
-    <Route path="/dashboard" element={<h1>Hello world</h1>} />
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Dashboard />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Route>
     <Route path="*" element={<NotFound />} />
   </Routes>
 )

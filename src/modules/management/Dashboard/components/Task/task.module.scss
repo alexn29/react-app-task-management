@@ -1,0 +1,75 @@
+.taskContainer {
+  background-color: var(--neutral_4);
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    &.titleContainer {
+      gap: 1rem;
+
+      h3 {
+        margin: 0;
+        color: var(--neutral_1);
+      }
+
+      i {
+        color: var(--neutral_2);
+      }
+    }
+
+    &.dueDateContainer {
+      gap: 1rem;
+
+      p {
+        color: var(--neutral_1);
+        margin: 0;
+      }
+
+      .dueDate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        color: var(--neutral_1);
+        border-radius: 0.25rem;
+        background-color: var(--neutral_2_with_opacity);
+        span {
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &.tagsContainer {
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      .tag {
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-transform: uppercase;
+
+        &.primary {
+          color: var(--primary_4);
+          background: var(--primary_4_with_opacity);
+        }
+        &.secondary {
+          color: var(--secondary_4);
+          background: var(--secondary_4_with_opacity);
+        }
+        &.tertiary {
+          color: var(--tertiary_4);
+          background: var(--tertiary_4_with_opacity);
+        }
+      }
+    }
+  }
+}
