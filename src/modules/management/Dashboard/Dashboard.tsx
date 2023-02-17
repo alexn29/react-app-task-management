@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { IconButton } from '@modules/common/components/IconButton'
-import { TaskGrid, TaskList } from './components'
 import type { ViewToggle } from '@app-types/tasks'
+import { TaskGrid, TaskList } from './components'
+import { IconButton } from '@modules/common/components/IconButton'
+
 import styles from './dashboard.module.scss'
 
 const Dashboard = () => {

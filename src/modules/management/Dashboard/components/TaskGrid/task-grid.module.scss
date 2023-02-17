@@ -1,7 +1,7 @@
 .tasksGrid {
+  gap: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
 
   .taskColumn {
     gap: 1rem;
@@ -12,5 +12,20 @@
       font-weight: 600;
       color: var(--neutral_1);
     }
+
+    .tasks {
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 189px);
+      overflow: auto;
+      padding: 0 1rem 1rem 0;
+    }
   }
+}
+
+.loadingContainer {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

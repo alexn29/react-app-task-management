@@ -36,11 +36,21 @@
         justify-content: center;
         gap: 0.5rem;
         padding: 0.5rem 1rem;
-        color: var(--neutral_1);
         border-radius: 0.25rem;
-        background-color: var(--neutral_2_with_opacity);
+        &.onTime {
+          color: var(--neutral_1);
+          background-color: var(--neutral_2_with_opacity);
+        }
+        &.almostLate {
+          color: var(--tertiary_4);
+          background-color: var(--tertiary_4_with_opacity);
+        }
+        &.late {
+          color: var(--primary_4);
+          background-color: var(--primary_4_with_opacity);
+        }
         span {
-          font-weight: 600;
+          // font-weight: 600;
           text-transform: uppercase;
         }
       }
@@ -71,5 +81,9 @@
         }
       }
     }
+  }
+
+  .avatar {
+    border-radius: 50%;
   }
 }
