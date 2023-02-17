@@ -29,4 +29,8 @@ $font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubunt
   --secondary_4_with_opacity: #{$secondary_4_with_opacity};
   --tertiary_4_with_opacity: #{$tertiary_4_with_opacity};
   --font: #{$font};
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #{$primary_4};
+  --scrollbar-thumb-hover: #{$primary_4};
+  --scrollbar-width: 12px;
 }
