@@ -4,7 +4,8 @@
     "paths": {
       "@assets/*": ["./src/assets/*"],
       "@modules/*": ["./src/modules/*"],
-      "@app-types/*": ["./src/types/*"]
+      "@app-types/*": ["./src/types/*"],
+      "@graphql/*": ["./src/graphql/*"]
     }
   }
 }
