@@ -1,6 +1,62 @@
-# Getting Started with Create React App
+# Tasks Management
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This application allows you to create tasks, the user can add some basic configurations such as:
+- Add/edit the task name
+- Specify point estimation
+- Assign it to specific users
+- Select the expiration date
+- Select the task status
+- Select tags from a defined list
+
+## Build with
+- `@apollo/client`
+- `graphql`
+- `dayjs`
+- `classnames`
+- `react-loading-skeleton`
+- `react-router-dom`
+- `remixion`
+- `semantic-ui`
+- `sweetalert2`
+- `zustand`
+- `@craco/craco`
+- `sass`
+- `eslint`
+- `prettier`
+
+## Requirements
+
+```
+- NodeJS v16.19.0
+- Yarn
+```
+
+## Installation
+
+```
+# Clone this repository
+git clone https://github.com/alexn29/react-app-task-management.git
+
+# Navigate to the cloned folder
+cd react-app-task-management
+
+# Use the NodeJS version from .nvmrc
+nvm use
+
+Note: if you are on windows and using gitbash, type the following: 
+nvm use $(cat .nvmrc)
+
+# Once you select the correct nodejs version, now install the dependencies
+yarn install
+
+# Run in development mode
+yarn start
+
+# Finally, open your web browser and navigate to
+http://localhost:3000/
+```
 
 ## Available Scripts
 
@@ -29,20 +85,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-# react-app-task-management
+Analyzes source code to flag programming errors, bugs, stylistic errors, and suspicious constructs
