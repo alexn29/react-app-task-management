@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { SkeletonTheme } from 'react-loading-skeleton'
 import { ApolloClient, InMemoryCache, HttpLink, ApolloLink, ApolloProvider } from '@apollo/client'
 import { App } from '@modules/app'
 
+import 'semantic-ui-css/semantic.min.css'
 import 'remixicon/fonts/remixicon.css'
-import './index.module.scss'
+import 'react-loading-skeleton/dist/skeleton.css'
+import 'sweetalert2/src/sweetalert2.scss'
+import './assets/scss/index.module.scss'
 
 // setting up apollo client
 const httpLink = new HttpLink({ uri: 'https://syn-api-prod.herokuapp.com/graphql' })
@@ -30,9 +34,11 @@ const client = new ApolloClient({
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-  <React.StrictMode>
+  <React.Fragment>
     <ApolloProvider client={client}>
-      <App />
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        <App />
+      </SkeletonTheme>
     </ApolloProvider>
-  </React.StrictMode>
+  </React.Fragment>
 )

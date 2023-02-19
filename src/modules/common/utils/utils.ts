@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import type { PointEstimate, DueDateInfo } from '@app-types/tasks'
+import type { PointEstimate, DueDateInfo } from '@app-types/task'
 import isToday from 'dayjs/plugin/isToday'
 import calendar from 'dayjs/plugin/calendar'
 import isYesterday from 'dayjs/plugin/isYesterday'

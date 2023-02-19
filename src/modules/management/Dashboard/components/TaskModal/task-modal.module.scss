@@ -1,0 +1,33 @@
+/* hardcoding dark mode */
+.modal {
+  background: var(--neutral_3) !important;
+
+  :global {
+    .header.modal-header {
+      color: var(--neutral_1) !important;
+      border-color: var(--neutral_4) !important;
+      background: var(--neutral_3) !important;
+    }
+
+    .content {
+      background: var(--neutral_3) !important;
+
+      .ui.input > input,
+      .ui.button,
+      .ui.selection.dropdown {
+        color: var(--neutral_1);
+        background: var(--neutral_4);
+      }
+    }
+
+    .actions {
+      border-color: var(--neutral_4) !important;
+      background: var(--neutral_3) !important;
+    }
+  }
+}
+
+.btnPrimary {
+  color: var(--neutral_1) !important;
+  background: var(--primary_4) !important;
+}

@@ -12,22 +12,24 @@ export interface DueDateInfo {
   status: DueDateStatus
 }
 
+export interface Assignee {
+  avatar: string
+  createdAt: Date
+  email: string
+  fullName: string
+  id: string
+  type: string
+  updatedAt: Date
+}
+
 export interface Task {
-  assignee: {
-    avatar: string
-    createdAt: Date
-    email: string
-    fullName: string
-    id: string
-    type: string
-    updatedAt: Date
-  }
+  assignee: Assignee
   createdAt: Date
   dueDate: string
-  id: string
+  id?: string
   name: string
-  pointEstimate: PointEstimate
-  position: number
-  status: TaskStatus
+  pointEstimate: PointEstimate | null
+  position?: number
+  status?: TaskStatus | null
   tags: string[]
 }

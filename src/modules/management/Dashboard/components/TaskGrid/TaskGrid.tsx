@@ -1,7 +1,5 @@
-import { useQuery } from '@apollo/client'
-import { GET_TASKS } from '@graphql/queries'
-import type { Task as TaskType } from '@app-types/tasks'
-import { Task } from '../Task'
+import { Task } from './components/Task'
+import { useTaskQuery } from '@modules/common/hooks/useTaskQuery'
 import { GridSkeleton } from '@modules/common/components/GridSkeleton'
 import { EmptyPlaceholder } from '@modules/common/components/EmptyPlaceholder'
 import { ErrorPlaceholder } from '@modules/common/components/ErrorPlaceholder'
@@ -12,29 +10,19 @@ const TaskGrid = () => {
     loading: loadingBacklogTasks,
     data: backlogTasks,
     error: errorBacklogTasks,
-  } = useQuery<{ tasks: TaskType[] }>(GET_TASKS, {
-    variables: { input: { status: 'BACKLOG' } },
-  })
+  } = useTaskQuery({ status: 'BACKLOG' })
 
   const {
     loading: loadingInProgressTasks,
     data: inProgressTasks,
     error: errorInProgressTasks,
-  } = useQuery<{
-    tasks: TaskType[]
-  }>(GET_TASKS, {
-    variables: { input: { status: 'IN_PROGRESS' } },
-  })
+  } = useTaskQuery({ status: 'IN_PROGRESS' })
 
   const {
     loading: loadingCompletedTasks,
     data: completedTasks,
     error: errorCompleted,
-  } = useQuery<{
-    tasks: TaskType[]
-  }>(GET_TASKS, {
-    variables: { input: { status: 'DONE' } },
-  })
+  } = useTaskQuery({ status: 'DONE' })
 
   if (loadingBacklogTasks || loadingInProgressTasks || loadingCompletedTasks) {
     return (
@@ -83,7 +71,7 @@ const TaskGrid = () => {
         </div>
       </div>
       <div className={styles.taskColumn}>
-        <p className={styles.title}>Cancelled ({completedTasks?.tasks.length ?? 0})</p>
+        <p className={styles.title}>Completed ({completedTasks?.tasks.length ?? 0})</p>
         <div className={styles.tasks}>
           {completedTasks?.tasks !== undefined && completedTasks?.tasks.length > 0 ? (
             completedTasks?.tasks.map((task) => <Task key={task.id} taskInfo={task} />)

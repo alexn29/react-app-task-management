@@ -1,0 +1,23 @@
+.container {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--neutral_4);
+  margin-bottom: 2rem;
+  span {
+    color: var(--neutral_2);
+    font-size: 20px;
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    color: var(--neutral_2);
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+}

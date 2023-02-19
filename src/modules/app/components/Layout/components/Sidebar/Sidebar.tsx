@@ -13,6 +13,12 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/profile" className={({ isActive }) => (isActive ? styles.active : '')}>
+            <i className="ri-user-fill"></i>
+            <span>Profile</span>
+          </NavLink>
+        </li>
       </ul>
     </div>
   )

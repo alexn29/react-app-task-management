@@ -1,4 +1,4 @@
-@import 'assets/scss/variables.module.scss';
+@import './variables.module.scss';
 
 body {
   font-family: var(--font);
@@ -22,11 +22,11 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
+  background: var(--scrollbar-track) !important;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
+  background: var(--scrollbar-thumb) !important;
   border-radius: var(--scrollbar-width);
   border: calc(var(--scrollbar-width) / 4) solid var(--neutral_4);
 }
